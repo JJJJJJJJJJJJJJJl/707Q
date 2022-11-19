@@ -107,56 +107,70 @@ class Flavor(Enum):
 """
 class Strain(object):
     def __init__(self, name="", images=[], type=Type.nan, main_effect=Effect.nan, effects=[], thc=-1, cbd=-1, cbg=-1, main_terpene=Terpene.nan, main_flavor=Flavor.nan, flavors=[]):
-        self.name = name;
-        self.images = images;
-        self.type = type;
-        self.main_effect = main_effect;
-        self.effects = effects;
-        self.thc = thc;
-        self.cbd = cbd;
-        self.cbg = cbg;
-        self.main_terpene = main_terpene;
-        self.main_flavor = main_flavor;
-        self.flavors = flavors;
+        self._name = name;
+        self._images = images;
+        self._type = type;
+        self._main_effect = main_effect;
+        self._effects = effects;
+        self._thc = thc;
+        self._cbd = cbd;
+        self._cbg = cbg;
+        self._main_terpene = main_terpene;
+        self._main_flavor = main_flavor;
+        self._flavors = flavors;
     
     @property
     def name(self):
         return self._name;
+    
+    @name.setter
+    def name(self, name):
+        self.name = name;
 
     @property
     def images(self):
-        return self._images
+        return self._images;
 
     @property
     def type(self):
-        return self._type
+        return self._type;
     
     @property
     def main_effect(self):
-        return self._main_effect
+        return self._main_effect;
+    
+    @property
+    def effects(self):
+        return self._effects;
 
     @property
     def thc(self):
-        return self._thc
+        return self._thc;
     
     @property
     def cbd(self):
-        return self._cbd
+        return self._cbd;
     
     @property
     def cbg(self):
-        return self._cbg
+        return self._cbg;
 
     @property
     def main_terpene(self):
-        return self._main_terpene
+        return self._main_terpene;
 
     @property
     def main_flavor(self):
-        return self._main_flavor
+        return self._main_flavor;
+
+    @property
+    def flavors(self):
+        return self._flavors;
+
 
 def main():
-    print("nop");
+    print("Strain Object Class File");
+    print(Type["sativa"]);
 
 if __name__ == "__main__":
     main();

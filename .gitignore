@@ -1,2 +1,4 @@
 .DS_Store
 datasets/
+src/strains/jjjjjjdataset.csv
+src/strains/__pycache__/

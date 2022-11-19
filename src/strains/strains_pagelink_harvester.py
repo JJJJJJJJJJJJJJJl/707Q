@@ -9,8 +9,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-MAX_PAGE = 344;
-
 """ 
     -> Ok, so 21 button only shows up on the first website access, so
     it could have an initial access, prior to pages scrapping, just 
@@ -44,7 +42,7 @@ def save_links(link_list):
 def get_strains_page_links():
     # This collects all 18 strains in a single page, can we loop it with no problems? lets try :)
     # OK seems to work just fine *-* (thank fcin god...)
-    for i in range(1, MAX_PAGE+1):
+    for i in range(321, 345):
         strains_link = [];
         try:
             url = "https://www.leafly.com/strains?itm_source=blast&itm_medium=sp-hero&itm_campaign=trf-all-strain-marquee-usa-all&page="+str(i);
